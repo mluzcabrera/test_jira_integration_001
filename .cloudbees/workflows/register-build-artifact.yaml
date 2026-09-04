@@ -11,6 +11,6 @@ jobs:
       - name: Say hello
         with:
           version: ${{ cloudbees.version }}
-          url: docker.io/myapp/artifact:${{cloudbees..version}}
+          url: docker.io/myapp/artifact:${{cloudbees.version}}
           name: artifact
         uses: cloudbees-io/register-build-artifact@v2
