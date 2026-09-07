@@ -8,9 +8,15 @@ on:
 jobs:
   build:
     steps:
-      - name: Say hello
+      - name: Register build artifact
+        id: register-artifact
         with:
           version: ${{ cloudbees.version }}
           url: docker.io/myapp/artifact:${{cloudbees.version}}
           name: artifact
         uses: cloudbees-io/register-build-artifact@v2
+      - name: Print artifact ID
+        uses: docker://alpine:latest
+        shell: sh
+        run: |
+           echo "artifact ID for artifact:${{cloudbees.version}} is: ${{ steps.register-artifact.outputs.artifact-id }}"
