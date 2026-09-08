@@ -1,4 +1,4 @@
-Damn Vulnerable Golang Application
+Damn Vulnerable Golang Application TEST
 This repository contains a deliberately vulnerable golang (go) application designed to demonstrate unsafe programming practices and common security vulnerabilities. The purpose of this application is to serve as an educational resource for developers to learn about secure coding practices and to test static analysis tools.
 
 Disclaimer
